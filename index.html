@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jojo - Desainer Flyer Kreatif di Bitung. Membuat desain flyer yang menarik, simpel, estetik, dan efektif untuk bisnis Anda.">
+  <meta name="keywords" content="desainer flyer, flyer designer, desain grafis, bitung, jasa desain">
+  <meta name="author" content="Jojo">
+
+  <title>Jojo | Flyer Designer - Bitung</title>
+
+  <!-- Fonts: Plus Jakarta Sans (Premium Apple Aesthetic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Security Headers (Client-side) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+  <!-- WebGL Canvas for 3D Immersive Background -->
+  <canvas id="webgl-canvas"></canvas>
+  <div class="fog-overlay"></div>
+
+  <!-- Depth Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-bar"></div>
+  </div>
+
+  <!-- Custom Context Menu -->
+  <div id="custom-context-menu" class="context-menu">
+    <div class="context-menu-header">Hubungi Jojo</div>
+    <a href="https://wa.me/6287730569181" target="_blank" class="context-menu-item">
+      <span class="icon">💬</span> Chat via WhatsApp
+    </a>
+    <a href="https://t.me/jojopunyaini" target="_blank" class="context-menu-item">
+      <span class="icon">✈️</span> Chat via Telegram
+    </a>
+    <div class="context-menu-divider"></div>
+    <div class="context-menu-item close-menu">
+      <span class="icon">✕</span> Tutup Menu
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <div class="rooms-container">
+    <!-- ============================================
+         ROOM 1: HERO (Inspiration: Samuel LinkPro style)
+         ============================================ -->
+    <section class="room-section active" id="hero-room">
+      <div class="room-content container">
+        <header class="hero" id="hero">
+          <div class="hero-new-layout">
+            <div class="hero-info-side">
+              <p class="hero-greeting fade-in-up">Hello There!</p>
+              <h1 class="hero-name-alt fade-in-up">I'm Jojo <span class="accent-dot">.</span></h1>
+              <p class="hero-description fade-in-up">
+                I'm a passionate and detail-driven <strong>Flyer Designer</strong> with a focus on creating visually
+                compelling and strategically sound design solutions. With a solid understanding of visual communication,
+                I help businesses and individuals bring their ideas to life across digital and print media.
+              </p>
+
+              <!-- Stats Bar -->
+              <div class="stats-bar fade-in-up">
+                <div class="stat-item">
+                  <div class="stat-value">
+                    <span class="stat-num counter" data-target="3">0</span><span class="stat-plus">+</span>
+                  </div>
+                  <span class="stat-label">Years of Experience</span>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">
+                    <span class="stat-num counter" data-target="50">0</span><span class="stat-plus">+</span>
+                  </div>
+                  <span class="stat-label">Projects Done</span>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">
+                    <span class="stat-num counter" data-target="40">0</span><span class="stat-plus">+</span>
+                  </div>
+                  <span class="stat-label">Happy Clients</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-image-side fade-in-up">
+              <div class="hero-img-container">
+                <img src="assets/images/profile.jpg" alt="Jojo Profile" class="hero-profile-img">
+                <a href="#contact" class="status-pill pulse-glow">✦ Tersedia untuk Project</a>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ROOM 2: ABOUT & SERVICES
+         ============================================ -->
+    <section class="room-section" id="about-room">
+      <div class="room-content">
+        <main class="content-wrapper">
+          <div class="content-grid">
+            <div class="left-column">
+              <section class="creative-dna card fade-in-up">
+                <h2 class="section-title">Tentang Saya</h2>
+                <p class="creative-bio">
+                  Halo! Saya <strong>Jojo</strong>, desainer grafis dari Bitung.
+                  Saya suka membuat desain yang <em>simpel, estetik, dan langsung ke tujuan</em>.
+                </p>
+              </section>
+              <section class="about-gallery card fade-in-up">
+                <h2 class="section-title">Galeri Saya</h2>
+                <div class="about-images">
+                  <img src="assets/images/tentangsaya_2.jpg" alt="Jojo 2" class="about-img">
+                  <img src="assets/images/tentangsaya_3.jpg" alt="Jojo 3" class="about-img">
+                  <img src="assets/images/tentangsaya_4.jpg" alt="Jojo 4" class="about-img">
+                </div>
+              </section>
+            </div>
+            <div class="center-column">
+              <section class="services-section card fade-in-up">
+                <h2 class="section-title">Layanan Desain</h2>
+                <div class="services-list stagger-container">
+                  <div class="service-item stagger-item">
+                    <span class="service-icon">�️</span>
+                    <div class="service-text">
+                      <h4>Flyer Instansi</h4>
+                      <p>Desain profesional untuk lembaga pemerintahan & swasta</p>
+                    </div>
+                  </div>
+                  <div class="service-item stagger-item">
+                    <span class="service-icon">🎨</span>
+                    <div class="service-text">
+                      <h4>Visual Branding</h4>
+                      <p>Membantu menguatkan identitas brand Anda melalui visual</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="right-column">
+              <section class="clients-section card fade-in-up" id="clients">
+                <h2 class="section-title">Klien Kami</h2>
+                <div class="clients-grid stagger-container">
+                  <div class="client-logo stagger-item"><img src="assets/images/clientlogos/1.png" loading="lazy"
+                      alt="Klien 1"></div>
+                  <div class="client-logo stagger-item"><img src="assets/images/clientlogos/2.png" alt="Klien 2"></div>
+                  <div class="client-logo stagger-item"><img src="assets/images/clientlogos/3.png" alt="Klien 3"></div>
+                  <div class="client-logo stagger-item"><img src="assets/images/clientlogos/4.png" alt="Klien 4"></div>
+                  <div class="client-logo stagger-item"><img src="assets/images/clientlogos/5.png" alt="Klien 5"></div>
+                  <div class="client-logo stagger-item"><img src="assets/images/clientlogos/6.png" alt="Klien 6"></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ROOM 3: PORTFOLIO
+         ============================================ -->
+    <section class="room-section" id="portfolio-room">
+      <div class="room-content container">
+        <h2 class="section-title fade-in-up">Galeri Flyer</h2>
+        <div class="portfolio-grid">
+          <article class="portfolio-item fade-in-up"><img src="assets/images/flyer_contoh_1.png" loading="lazy"
+              alt="Flyer 1">
+            <div class="portfolio-overlay">
+              <h3>Flyer Design</h3><span class="portfolio-tag">Project</span>
+            </div>
+          </article>
+          <article class="portfolio-item fade-in-up"><img src="assets/images/flyer_contoh_2.png" alt="Flyer 2">
+            <div class="portfolio-overlay">
+              <h3>Flyer Design</h3><span class="portfolio-tag">Project</span>
+            </div>
+          </article>
+          <article class="portfolio-item fade-in-up"><img src="assets/images/flyer_contoh_3.png" alt="Flyer 3">
+            <div class="portfolio-overlay">
+              <h3>Flyer Design</h3><span class="portfolio-tag">Project</span>
+            </div>
+          </article>
+          <article class="portfolio-item fade-in-up"><img src="assets/images/flyer_contoh_4.png" alt="Flyer 4">
+            <div class="portfolio-overlay">
+              <h3>Flyer Design</h3><span class="portfolio-tag">Project</span>
+            </div>
+          </article>
+        </div>
+        <p style="text-align: center; margin-top: 2rem; color: var(--text-secondary);">Scroll terus untuk lihat lainnya
+          & kontak</p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         ROOM 4: CONTACT
+         ============================================ -->
+    <section class="room-section" id="contact-room">
+      <div class="room-content">
+        <footer class="contact-section" id="contact">
+          <div class="container">
+            <div class="contact-content fade-in-up">
+              <div class="contact-cta">
+                <h2>Hubungi Saya</h2>
+                <p>Siap membantu mewujudkan ide flyer untuk bisnis Anda.<br>Hubungi saya untuk diskusi lebih lanjut!</p>
+              </div>
+              <div class="contact-buttons">
+                <a href="https://wa.me/6287730569181" class="contact-btn whatsapp" target="_blank" rel="noopener">Chat
+                  WhatsApp</a>
+                <a href="https://t.me/jojopunyaini" class="contact-btn telegram" target="_blank" rel="noopener">Chat
+                  Telegram</a>
+              </div>
+              <div class="copyright">
+                <span>© 2024 Jojo. Desainer Flyer Kreatif.</span>
+                <a href="#hero" class="back-to-top"
+                  style="display: block; margin-top: 1rem; color: var(--accent-primary); text-decoration: none; font-weight: 700;">↑
+                  Kembali ke Atas</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" title="Tutup">×</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" title="Sebelumnya">‹</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" title="Berikutnya">›</button>
+      <img src="" alt="Preview" id="lightboxImg">
+      <div class="lightbox-info">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/immersive.js"></script>
+</body>
+
+</html>
